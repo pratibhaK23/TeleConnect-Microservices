@@ -1,0 +1,219 @@
+Business Requirements Document (BRD) 
+for Telecom Application 
+Project Title: Telecom Microservices System 
+Table of Contents 
+1. Introduction 
+2. Objectives 
+3. Scope 
+4. Use Cases 
+5. Non-Functional Requirements 
+6. Conclusion 
+1. Introduction 
+The Telecom Microservices System aims to enhance customer experience and streamline 
+operations related to service provisioning, billing, and support in the telecom industry 
+through a robust microservices architecture. 
+2. Objectives 
+• Improve customer interaction and satisfaction through self-service capabilities. 
+• Streamline service provisioning and management processes. 
+• Enhance billing accuracy and provide transparent billing information. 
+• Enable efficient handling of customer support requests. 
+3. Scope 
+This document outlines ten key use cases relevant to the telecom domain that will be 
+implemented using a microservices architecture. Each use case includes detailed descriptions 
+and workflows. 
+4. Use Cases 
+Use Case 1: User Registration 
+• Description: New users can create an account on the telecom platform. 
+• Actors: User, Registration Service 
+• Preconditions: The user provides valid personal information. 
+• Postconditions: A new user account is created, and the user receives confirmation. 
+• Main Flow: 
+1. User navigates to the registration page. 
+2. User fills out the registration form with required information (name, email, 
+phone number, etc.). 
+3. Registration Service validates the information (checks for duplicates). 
+4. If valid, the service creates a new user record in the database. 
+5. The service sends a confirmation email or SMS to the user. 
+Use Case 2: Plan Search 
+• Description: Users can search for available telecom plans based on their needs. 
+• Actors: User, Plan Search Service 
+• Preconditions: The user is logged in or browsing as a guest. 
+• Postconditions: The user receives a list of available telecom plans. 
+• Main Flow: 
+1. User accesses the plan search page. 
+2. User enters search criteria (data limits, price range, type of plan). 
+3. Plan Search Service retrieves relevant plans from the database. 
+4. The service formats the plan information (features, pricing) for display. 
+5. The user views the list of available telecom plans on the screen. 
+Use Case 3: Subscribe to a Plan 
+• Description: Users can subscribe to a selected telecom plan. 
+• Actors: User, Subscription Service, Plan Service 
+• Preconditions: The user has selected a telecom plan. 
+• Postconditions: The user is successfully subscribed to the selected plan. 
+• Main Flow: 
+1. User selects a plan from the search results. 
+2. Subscription Service retrieves plan details and prompts the user for 
+confirmation. 
+3. User confirms the subscription and provides any required personal 
+information. 
+4. The Subscription Service processes the subscription and updates the user’s 
+account. 
+5. The user receives a confirmation email or SMS regarding the subscription. 
+Use Case 4: Manage Account 
+• Description: Users can view and manage their account information. 
+• Actors: User, Account Management Service 
+• Preconditions: The user is logged into their account. 
+• Postconditions: The user’s account information is updated. 
+• Main Flow: 
+1. User logs into their account and navigates to the "My Account" section. 
+2. Account Management Service retrieves the user’s account details. 
+3. User can view and edit personal information (address, contact numbers). 
+4. User submits changes to update their information. 
+5. The service confirms the updates and notifies the user via email or SMS. 
+Use Case 5: Billing and Payment 
+• Description: Users can view their bills and make payments for services. 
+• Actors: User, Billing Service, Payment Service 
+• Preconditions: The user has an active account with outstanding bills. 
+• Postconditions: The user’s payment is processed successfully. 
+• Main Flow: 
+1. User navigates to the billing section of their account. 
+2. Billing Service retrieves the user’s current bill details. 
+3. User selects a payment method and enters payment information. 
+4. Payment Service processes the payment and updates the billing records. 
+5. The user receives a confirmation of payment via email or SMS. 
+Use Case 6: View Usage History 
+• Description: Users can view their usage history for calls, messages, and data. 
+• Actors: User, Usage Tracking Service 
+• Preconditions: The user is logged into their account. 
+• Postconditions: The user views a detailed history of their usage. 
+• Main Flow: 
+1. User logs into their account and navigates to the "Usage History" section. 
+2. Usage Tracking Service retrieves the user’s usage data from the database. 
+3. The service displays a breakdown of call, message, and data usage. 
+4. User can filter the history by date range or type of usage. 
+5. The user can download or print the usage report if needed. 
+Use Case 7: Customer Support Request 
+• Description: Users can submit support requests for assistance. 
+• Actors: User, Support Service 
+• Preconditions: The user must be logged in or have an active account. 
+• Postconditions: The support request is logged and acknowledged. 
+• Main Flow: 
+1. User navigates to the customer support section of the app or website. 
+2. User fills out a support request form detailing the issue. 
+3. Support Service logs the request in the database. 
+4. The service assigns a support ticket and sends an acknowledgment to the user. 
+5. A support representative contacts the user to resolve the issue. 
+Use Case 8: Plan Upgrade/Downgrade 
+• Description: Users can upgrade or downgrade their current telecom plan. 
+• Actors: User, Plan Management Service 
+• Preconditions: The user is logged into their account with an active plan. 
+• Postconditions: The user’s plan is updated as per the request. 
+• Main Flow: 
+1. User logs into their account and navigates to the "Manage Plans" section. 
+2. Plan Management Service retrieves the user’s current plan details. 
+3. User selects the option to upgrade or downgrade their plan. 
+4. The service presents available options and their details for selection. 
+5. The user confirms the change, and the service updates the account 
+accordingly. 
+Use Case 9: View Service Outages 
+• Description: Users can view information about service outages in their area. 
+• Actors: User, Outage Notification Service 
+• Preconditions: The user is logged in or browsing as a guest. 
+• Postconditions: The user is informed about current or upcoming outages. 
+• Main Flow: 
+1. User navigates to the service outage page. 
+2. Outage Notification Service retrieves outage data based on the user's location. 
+3. The service displays information about current outages and estimated 
+resolution times. 
+4. User can subscribe to alerts for updates on the outage. 
+5. The service confirms the subscription for outage notifications. 
+Use Case 10: Loyalty Program Management 
+• Description: Users can view and manage their participation in loyalty programs. 
+• Actors: User, Loyalty Program Service 
+• Preconditions: The user is logged into their account. 
+• Postconditions: The user’s loyalty program status is updated or viewed. 
+• Main Flow: 
+1. User logs into their account and navigates to the "Loyalty Program" section. 
+2. Loyalty Program Service retrieves the user’s loyalty points and status. 
+3. User can view available rewards and redeem points if eligible. 
+4. The service processes any redemptions and updates the loyalty points balance. 
+5. The user receives confirmation of the redemption and updated points. 
+5. Non-Functional Requirements 
+Overview 
+This section outlines the non-functional requirements for this application utilizing a 
+microservices architecture implemented with Spring Cloud, MySQL, OAuth2, and JWT. 
+These requirements are essential for ensuring that the application meets performance, 
+security, and operational standards. 
+5.1. Scalability 
+• Horizontal Scaling: Each microservice must be designed to scale horizontally by 
+deploying multiple instances based on demand. Load balancing must be 
+implemented to distribute traffic evenly. 
+• Service Discovery: Utilize Spring Cloud Netflix Eureka for dynamic service 
+discovery, enabling microservices to find and communicate with each other 
+efficiently. 
+5.2. Performance 
+• Response Time: 
+o The system should respond to user requests within 200 milliseconds for 
+95% of operations. 
+o For batch processing tasks (e.g., bulk transactions), the maximum 
+acceptable response time should not exceed 2 seconds. 
+• Throughput: Each microservice should handle a minimum of 100 transactions 
+per second under normal load conditions. 
+5.3. Security 
+• Data Encryption: 
+o Sensitive data (e.g., user credentials, personal information) must be 
+encrypted in MySQL using AES-256 encryption. 
+o All communication between microservices must be encrypted using TLS 
+(Transport Layer Security). 
+• Authentication and Authorization: 
+o Implement OAuth2 for user authentication, utilizing JWTs (JSON Web 
+Tokens) for secure token-based access. 
+o Tokens must have an expiration time of 15 minutes and should be 
+refreshable without re-authentication for active sessions. 
+5.4. Availability 
+• Uptime Requirement: The system must achieve 99.9% availability, with 
+scheduled maintenance windows communicated in advance to users. 
+• Failover Mechanisms: Implement circuit breaker patterns using Spring Cloud 
+Resilience4j to prevent cascading failures and ensure resilience under load. 
+5.5. Compliance 
+• Data Protection: Ensure compliance with relevant data protection regulations 
+such as GDPR and PCI DSS. 
+• Audit Logging: Maintain detailed logs of user activities, access events, and 
+system changes for audit purposes. Logs should be retained for a minimum of 6 
+months. 
+5.6. Reliability 
+• Error Handling: Each microservice should have robust error handling and return 
+appropriate HTTP status codes (e.g., 4xx for client errors, 5xx for server errors). 
+• Data Consistency: Implement eventual consistency for distributed transactions 
+using patterns like Saga or CQRS (Command Query Responsibility Segregation). 
+5.7. Maintainability 
+• Code Modularity: Each microservice must be modular and follow the Single 
+Responsibility Principle, making it easier to update and deploy independently. 
+• Configuration: Each microservice must be configure all external properties using 
+Spring Cloud Config server. 
+• CI/CD Pipeline: Establish a Continuous Integration/Continuous Deployment 
+(CI/CD) pipeline using tools like Jenkins or GitLab CI for automated testing and 
+deployment of microservices. 
+5.8. Usability 
+• API Documentation: Provide comprehensive API documentation using 
+Swagger/OpenAPI to facilitate ease of use for developers integrating with the 
+microservices. 
+• Error Messages: Implement user-friendly error messages and codes to guide 
+users in troubleshooting issues. 
+5.9. Monitoring and Logging 
+• Centralized Logging: Use a centralized logging solution (e.g., ELK Stack - 
+Elasticsearch, Logstash, Kibana) for collecting and analyzing logs from all 
+microservices. 
+• Performance Monitoring: Implement monitoring tools (e.g., Spring Boot 
+Actuator, Prometheus, Grafana) to track system performance metrics, service 
+health, and alert for anomalies. 
+5.10. Interoperability 
+• Standard Protocols: Ensure that all microservices communicate using RESTful 
+APIs or gRPC, adhering to standard HTTP methods and response formats (JSON). 
+• API Gateway: Utilize Spring Cloud Gateway to provide a single entry point for 
+all microservices, enabling routing, load balancing, and additional security 
+measures. 
+6. Conclusion 
+The Telecom Microservices System aims to enhance operational efficiency and user 
+experience through the outlined use cases. This architecture will facilitate rapid deployment, 
+scalability, and an improved user experience. 
